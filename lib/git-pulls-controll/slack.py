@@ -15,7 +15,7 @@ def post_message(message):
 def check_branch(data, base_branch_name, allow_branch_name):
   if data[0]["base"]["ref"] == base_branch_name:
     if data[0]["head"]["ref"] != allow_branch_name:
-      message = { "base_branch": data[0]["head"]["ref"], "head_branch": data[0]["head"]["ref"], "message" : "not required!" }
+      message = { "base_branch": data[0]["head"]["ref"], "head_branch": data[0]["head"]["ref"], "message" : "not allowed!" }
     else:
       message = { "base_branch": data[0]["head"]["ref"], "head_branch": data[0]["head"]["ref"], "message" : "ok" }
 
